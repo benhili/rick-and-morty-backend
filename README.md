@@ -1,8 +1,8 @@
 # Rick and Morty Character Explorer Backend
 
-## Description
+This is a backend service to extend the [Rick and Morty Character Explorer](https://github.com/benhili/rick-and-morty-frontend) web application.
 
-This is a backend service to extend the Rick and Morty Character Explorer web application.
+![Rick and Morty Characters](https://rickandmortyapi.com/api/character/avatar/1.jpeg)
 
 ## Tech Stack
 
@@ -15,7 +15,6 @@ This is a backend service to extend the Rick and Morty Character Explorer web ap
   - Nodemon for hot reloading
   - ts-node for TypeScript execution
   - ESLint for code linting
-- **CORS**: @fastify/cors for cross-origin requests
 
 ## Getting Started
 
@@ -241,12 +240,3 @@ All error responses follow this format:
   ]
 }
 ```
-
-### Data Validation
-
-The API uses Zod for request validation:
-
-- All required fields must be present
-- Enum values must match exactly (case-sensitive)
-- String fields cannot be empty
-- ID parameters must be numeric
