@@ -1,8 +1,8 @@
-This is a backend service for the Rick and Morty web application.
+# Rick and Morty Character Explorer Backend
 
 ## Description
 
-API endpoints for reading and updating a database of Rick and Morty characters
+This is a backend service to extend the Rick and Morty Character Explorer web application.
 
 ## Installation
 
@@ -165,11 +165,3 @@ The API uses Zod for request validation:
 - Enum values must match exactly (case-sensitive)
 - String fields cannot be empty
 - ID parameters must be numeric
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
