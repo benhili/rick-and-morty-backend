@@ -4,30 +4,115 @@
 
 This is a backend service to extend the Rick and Morty Character Explorer web application.
 
-## Installation
+## Tech Stack
+
+- **Runtime**: Node.js with TypeScript
+- **Web Framework**: Fastify
+- **Database**: SQLite3
+- **Validation**: Zod
+- **Testing**: Jest with Supertest
+- **Development**:
+  - Nodemon for hot reloading
+  - ts-node for TypeScript execution
+  - ESLint for code linting
+- **CORS**: @fastify/cors for cross-origin requests
+
+## Getting Started
+
+### Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/benhili/rick-and-morty-backend.git
+cd rick-and-morty-backend
+```
+
+2. **Install dependencies:**
 
 ```bash
 npm install
 ```
 
-## Usage
-
-To start a dev server
-
-```bash
-npm dev
-```
-
-To setup the database and seed with dummy data
+3. **Set up the database:**
 
 ```bash
 sqlite3 sqlite/characters.db < sqlite/init.sql
 ```
 
-To run tests against a mock db and server
+### Quick Start
+
+1. **Start the development server:**
+
+```bash
+npm run dev
+```
+
+2. **Test the API with curl:**
+
+Get API info:
+
+```bash
+curl http://localhost:3000/
+```
+
+Get all characters:
+
+```bash
+curl http://localhost:3000/character
+```
+
+Get a specific character:
+
+```bash
+curl http://localhost:3000/character/1
+```
+
+Create a new character:
+
+```bash
+curl -X POST http://localhost:3000/character \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Jerry Smith",
+    "status": "Alive",
+    "species": "Human",
+    "gender": "Male"
+  }'
+```
+
+## Development
+
+### Available Scripts
+
+Start development server with hot reload:
+
+```bash
+npm run dev
+```
+
+Run the test suite:
 
 ```bash
 npm test
+```
+
+Run tests in watch mode:
+
+```bash
+npm run test:watch
+```
+
+Run tests with coverage:
+
+```bash
+npm run test:coverage
+```
+
+Build the project:
+
+```bash
+npm run build
 ```
 
 ## API Documentation
